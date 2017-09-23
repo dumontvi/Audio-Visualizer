@@ -18,13 +18,13 @@ Design Consists (Largely) of :
 
 1) Audio core - Altera IP core for ADC/DAC conversion
 ![alt text](https://github.com/dumontvi/Audio-Visualizer/blob/master/Project_pictures/audio%20core.jpg)
-				Fig 1: Audio core block diagram
+Fig 1: Audio core block diagram
 
 The Audio CODEC receives the input audio(32-bits) in an analogue form, which is later decoded using the ADC into a digital form. Before the audio is sent out, it can be manipulated and then sent to the DAC to convert it back into the analog form four output.
 
 2) Vga core (testing purposes) - Altera IP for VGA output (adapted from the video recorder demo provided in the project handout)
 ![alt text](https://github.com/dumontvi/Audio-Visualizer/blob/master/Project_pictures/VGA%20block.jpg)
-			   Fig 2: VGA block diagram
+Fig 2: VGA block diagram
 
 The VGA core was only used for preliminary testing purposes in our project and was not the main focus of the project. The VGA core displayed the analog graph of the audio input, which helped gain a better understanding of analysing audio and reproducing it on the LED display. The x and y coordinates were plotted in the display module, which is later sent to the VGA to be plotted as a white pixel. The refresh rates of the display can be synchronized with the VGA core to prevent flickering using the V_Sync output from the monitor. 
 
@@ -37,9 +37,11 @@ The VGA core was only used for preliminary testing purposes in our project and w
 Initially, most of our testing was done on the VGA module, which was adapted from the video recorder demo from the project handout. This module works very closely with the VGA adapter. It gets in the audio input and helped us obtain coordinates for the 320x240 screen, which helped us the plot the coordinates and color each pixel on the VGA. It also utilises the concept of Finite State Machines(FSMs) and a delay counter to obtain the y coordinate for each x coordinate.
 
 5) LED Shrink and LED Lookup Table 
+
 ![alt text](https://github.com/dumontvi/Audio-Visualizer/blob/master/Project_pictures/LED%20Matrix%20circuit.jpg)
-			 	Fig 3: LED matrix circuit diagram                                  
-![alt text](https://github.com/dumontvi/Audio-Visualizer/blob/master/Project_pictures/LED.jpg)										Fig 4: LED matrix
+Fig 3: LED matrix circuit diagram                                  
+
+![alt text](https://github.com/dumontvi/Audio-Visualizer/blob/master/Project_pictures/LED.jpg)						Fig 4: LED matrix
 
 For this project, the LED matrix was constructed in house using a PCB design software called Eagle. The board was then etched using toner transfer method and then drilled, and then, LED’s were hand soldered onto the board.
 
