@@ -6,7 +6,7 @@ module display_onVGA(    input clock,
    	 input reset,
    	 input pause,
    	 input [15:0] data_audio_in,
-            	output reg [8:0] x_coords,
+       output reg [8:0] x_coords,
    	 output reg [7:0] y_coords,
    	 output [2:0] color_on_vga,
    	 output plot_on_vga);
