@@ -5,7 +5,9 @@ An audio-visualizer on an 8x8 LED Matrix done in Verilog.
 ![alt text](https://github.com/dumontvi/Audio-Visualizer/blob/master/Project_pictures/LED_project.png)
 
 Collaborator - Marian Daniel, Electrical Engineering, University of Toronto
-(Project adapted from Video_recorder demo from
+
+(Project utilizes few files from Video_recorder demo from ALTERA and UofT for Audio/Video and DAC support)
+
 # Introduction:
 Music is something that everyone can appreciate. While listening to music is nice, it would be nice to “see” what the music really is. So, we decided to start thinking about a way to take some audio, somehow “interpret” the audio and represent it to the user visually, somehow. While using a VGA is very interesting, we wanted to venture into grounds farther than the scope of the Digital Systems course, and work our way into knowledge we gained from other circuitry courses and design courses.
 
