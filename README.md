@@ -1,11 +1,11 @@
 # Audio-Visualizer
 An audio-visualizer on an 8x8 LED Matrix done in Verilog.
 
-Collaborator - Marian Daniel, Electrical Engineering, University of Toronto
-
 ![alt text](https://github.com/dumontvi/Audio-Visualizer/blob/master/Project_pictures/LED_Proj.jpg)
 ![alt text](https://github.com/dumontvi/Audio-Visualizer/blob/master/Project_pictures/LED_project.png)
 
+Collaborator - Marian Daniel, Electrical Engineering, University of Toronto
+(Project adapted from Video_recorder demo from
 # Introduction:
 Music is something that everyone can appreciate. While listening to music is nice, it would be nice to “see” what the music really is. So, we decided to start thinking about a way to take some audio, somehow “interpret” the audio and represent it to the user visually, somehow. While using a VGA is very interesting, we wanted to venture into grounds farther than the scope of the Digital Systems course, and work our way into knowledge we gained from other circuitry courses and design courses.
 
@@ -18,11 +18,13 @@ Design Consists (Largely) of :
 
 1) Audio core - Altera IP core for ADC/DAC conversion
 ![alt text](https://github.com/dumontvi/Audio-Visualizer/blob/master/Project_pictures/audio%20core.jpg)
-Fig 1: Audio core block diagram
+
+                                         Fig 1: Audio core block diagram
 
 The Audio CODEC receives the input audio(32-bits) in an analogue form, which is later decoded using the ADC into a digital form. Before the audio is sent out, it can be manipulated and then sent to the DAC to convert it back into the analog form four output.
 
 2) Vga core (testing purposes) - Altera IP for VGA output (adapted from the video recorder demo provided in the project handout)
+
 ![alt text](https://github.com/dumontvi/Audio-Visualizer/blob/master/Project_pictures/VGA%20block.jpg) 
 
                                           Fig 2: VGA block diagram
@@ -40,9 +42,12 @@ Initially, most of our testing was done on the VGA module, which was adapted fro
 5) LED Shrink and LED Lookup Table 
 
 ![alt text](https://github.com/dumontvi/Audio-Visualizer/blob/master/Project_pictures/LED%20Matrix%20circuit.jpg)
-Fig 3: LED matrix circuit diagram                                  
 
-![alt text](https://github.com/dumontvi/Audio-Visualizer/blob/master/Project_pictures/LED.jpg)						Fig 4: LED matrix
+    Fig 3: LED matrix circuit diagram                                  
+
+![alt text](https://github.com/dumontvi/Audio-Visualizer/blob/master/Project_pictures/LED.jpg)
+
+                                        Fig 4: LED matrix
 
 For this project, the LED matrix was constructed in house using a PCB design software called Eagle. The board was then etched using toner transfer method and then drilled, and then, LED’s were hand soldered onto the board.
 
@@ -61,12 +66,9 @@ We believe the project was successful as we had a perfect working model of our a
 It recorded, playbacked and manipulated the audio i.e slows down or quicken the playback rate. We were also able to test our audio visualizer on different scales of audio sensitivity that is gain analysis. We were able to reproduce this effect on the LED matrix where the green LEDs represented low levels of amplitude and the yellow and red LEDs represented higher gain levels. 
 ALthough we completed our project in time and everything worked as we planned, we were disappointed that we could not do our audio analysis in the frequency domain as it was out of scope of this course and had involved the use of the NIOS II microprocessor with the DE-1 soc board, which we were not familiar with.
 
-# What we would have done differently:
-Although we were satisfied with our project, we think our project could have better if we did the following changes:
+# Future Updates:
 Addition of an extra input source such as a touch pad or an instrument to generates beats.
-If provided with more time, we would have implemented a 3D version of our product on a 8x8x8 RGB LED matrix, which would have been a better representation of the audio analysis
-We would have also tried making an VGA output as an audio mixer, which would have given the user information such as recorded time and playback speed.
- External sensor to sense hand gestures to give audio commands such as play, record or pause.
+If provided with more time, we would have implemented a 3D version of our product on a 8x8x8 RGB LED matrix, which would have been a better representation of the audio analysis. We would have also tried making an VGA output as an audio mixer, which would have given the user information such as recorded time and playback speed. External sensor to sense hand gestures to give audio commands such as play, record or pause.
 
 # Appendix
 1) Schematics:
