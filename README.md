@@ -23,8 +23,7 @@ Fig 1: Audio core block diagram
 The Audio CODEC receives the input audio(32-bits) in an analogue form, which is later decoded using the ADC into a digital form. Before the audio is sent out, it can be manipulated and then sent to the DAC to convert it back into the analog form four output.
 
 2) Vga core (testing purposes) - Altera IP for VGA output (adapted from the video recorder demo provided in the project handout)
-![alt text](https://github.com/dumontvi/Audio-Visualizer/blob/master/Project_pictures/VGA%20block.jpg)
-Fig 2: VGA block diagram
+![alt text](https://github.com/dumontvi/Audio-Visualizer/blob/master/Project_pictures/VGA%20block.jpg) Fig 2: VGA block diagram
 
 The VGA core was only used for preliminary testing purposes in our project and was not the main focus of the project. The VGA core displayed the analog graph of the audio input, which helped gain a better understanding of analysing audio and reproducing it on the LED display. The x and y coordinates were plotted in the display module, which is later sent to the VGA to be plotted as a white pixel. The refresh rates of the display can be synchronized with the VGA core to prevent flickering using the V_Sync output from the monitor. 
 
